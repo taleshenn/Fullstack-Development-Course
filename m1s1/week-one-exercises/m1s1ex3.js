@@ -10,7 +10,7 @@ let students = [
         age: 47,
         gender: "male",
         classroom: "Trindade",
-        mathGrade: 8
+        mathGrade: 3
     },
     {
         name: "João",
@@ -48,6 +48,15 @@ let students = [
 
 let numberOfStudents = students.length
 // essa linha abaixo quero aprender como simplificar
-let totalGrades = students[0].mathGrade + students[1].mathGrade +students[2].mathGrade +students[3].mathGrade + students[4].mathGrade          
+let totalGrades = students[0].mathGrade + students[1].mathGrade + students[2].mathGrade + students[3].mathGrade + students[4].mathGrade
 let gradeAverage = totalGrades / numberOfStudents
 console.log(gradeAverage)
+
+students.forEach((student) =>{
+    if (student.mathGrade > 6)
+//        console.log(student.name)
+        console.log("O aluno " + student.name + " teve a média " + student.mathGrade + " e passou.")
+        else
+        console.log("O aluno " + student.name + " teve a média " + student.mathGrade + " e não passou.")
+        
+})
