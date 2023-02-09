@@ -51,22 +51,8 @@ let students = [
 let numberOfStudents = students.length
 
 // this line below I want to learn how to automate
-// let totalGrades = students[0].mathGrade + students[1].mathGrade + students[2].mathGrade + students[3].mathGrade + students[4].mathGrade;
-// let gradeAverage = totalGrades / numberOfStudents;
-// console.log(`A média da turma foi ${gradeAverage}`)
-
-let totalGrades = 0
-students.forEach((studentGrade) =>{
-    totalGrades = totalGrades + studentGrade.mathGrade 
-    // REMENBERING: As I gave to the Iten a name "studentGrade", 
-    // now I need to use this name to access the object and get the desired Item on it "studentGrade.mathGrade "
-    console.log(totalGrades) //show each iteraction
- })
-console.log(totalGrades) // show the final iteraction
-
+let totalGrades = students[0].mathGrade + students[1].mathGrade + students[2].mathGrade + students[3].mathGrade + students[4].mathGrade;
 let gradeAverage = totalGrades / numberOfStudents;
-// Here I call the result of the forEach iteraction and divide it by the number of students on the array.
-console.log(`A média da turma foi ${gradeAverage}`)
 
 // REMINDER TO MY SELF
 // if I have an Array called students is common sense to use student as an Iten.
