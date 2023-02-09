@@ -33,6 +33,11 @@
           <td>30/jan - 03/feb</td>
           <td><a href="m1s1/week-one-exercises/appsavesollege.html">Link</a></td>
         </tr>
+        <tr>
+          <td>02</td>
+          <td>06/feb - 10/feb</td>
+          <td><a href="m1s2/login.html">Link</a></td>
+        </tr>
       </tbody>
     </table>
   </details>
