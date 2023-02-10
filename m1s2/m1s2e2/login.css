@@ -1,0 +1,23 @@
+/* BODY */
+body {
+    margin: 0;
+}
+.loginMain {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2d2239;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginleft {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.loginleft > h1 > p {
+    color: bisque;
+}
