@@ -36,7 +36,7 @@
         <tr>
           <td>02</td>
           <td>06/feb - 10/feb</td>
-          <td><a href="m1s2/login.html">Link</a></td>
+          <td><a href="/m1s2">Link</a></td>
         </tr>
       </tbody>
     </table>
