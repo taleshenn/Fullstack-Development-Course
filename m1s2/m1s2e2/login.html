@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="login.css">
     <title>Week 02 Exercises</title>
 </head>
 
 <body>
     <div class="loginMain">
-        <form action="">
-            <div class="loginLeft">
+        <div class="loginLeft">
+        </div>
+        <div class="loginRight">
+            <div class="loginCard">
+                <p>[M1S02] Ex2 - Criar login</br>[App LoginStart]</p>
                 <h1>Login</h1>
-                <h2>[M1S02] Ex2 - Criar login [App LoginStart]</h2>
-                <div class="loginRight">
-                    <div class="loginCard">
-                        <div class="textField">
-                        <label for="user"> Username: <input id="userName" autocomplete="username" type="text" placeholder="username"></label>
-                        <label for="pass"> Password: <input id="password" autocomplete="current-password" type="password" placeholder="password"></label>
+                <form action="validator">
+                    <div class="textField">
+                        <label for="user" id="user"><input type="text" name="username" placeholder="username"></label>
                     </div>
-                    <button id="login" style="color: rgb(165, 165, 165);">Login</button>
+                    <div class="textField"><label for="pass" id="pass"><input type="password" placeholder="password"></label></div>
+                    <div class="textField"><button id="login">Login</button></div>
+                </div>
+            </div>
         </form>
-    </div>
-    </div>
-    </div>
     </div>
     <script src="js/functions.js"></script>
 </body>
