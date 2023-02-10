@@ -31,7 +31,7 @@
         <tr>
           <td>01</td>
           <td>30/jan - 03/feb</td>
-          <td><a href="m1s1/week-one-exercises/appsavesollege.html">Link</a></td>
+          <td><a href="m1s1/week-one-exercises">Link</a></td>
         </tr>
         <tr>
           <td>02</td>
