@@ -1,0 +1,36 @@
+/* BODY */
+body {
+    background-color: #ffbf00;
+    margin: 10;
+}
+
+.counterBox {
+    margin: auto;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 3px 5px 5px #9f7606;
+    padding: 20px;
+    border-radius: 175px;
+    width: 300px;
+    height: 300px;
+}
+
+.button {
+    margin: auto;
+    padding: 20px;
+    width: 100px;
+}
+
+#counter {
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #ffbf00;
+    font-size: 24px;
+}
+#startCount {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 36px;
+}
