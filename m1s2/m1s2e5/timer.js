@@ -1,4 +1,5 @@
 let startTime = 10
+let recurence
 counter.innerHTML = "Click on the button to start"
 function countdown(){
     if(startTime == 0){
@@ -15,5 +16,5 @@ function countdown(){
 
 function restart(){
     startTime = 10
-    let recurence = setInterval(countdown, 1000)
+    recurence = setInterval(countdown, 1000)
 }
