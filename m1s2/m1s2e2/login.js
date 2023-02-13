@@ -1,10 +1,16 @@
-// function signin() {
-//     let username = document.getElementById("username").value
-//     let password = document.getElementById("password").value
-//     let login = document.getElementById("login")
-    
-//     if (username == "" && password == "") 
-//     {
-//         console.log(`Logado como ${username} e senha ${password}`)
-//     }
-//     login.addEventListener("click", function(signin)
+function loginFake() {
+
+    // .value to get the data from the input username
+    let userFake = document.getElementById("user").value;
+    // .value to call the function loginFake
+    let passwordFake = document.getElementById("pass").value;
+    // event onclick to get the data from the input password 
+
+    if (userFake == "admin" && passwordFake == "admin") {
+        alert(`Logged in as ${userFake} with the password ${passwordFake}`)
+    }
+    else {
+        alert("Incorrect credentials")
+    }
+
+}
