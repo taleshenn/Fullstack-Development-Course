@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,19 +14,20 @@
         </div>
         <div class="loginRight">
             <div class="loginCard">
+                <img src="login.png" width="50px" alt="avatar">
                 <p>[M1S02] Ex2 - Criar login</br>[App LoginStart]</p>
                 <h1>Login</h1>
                 <form action="validator">
                     <div class="textField">
-                        <label for="user" id="user"><input type="text" name="username" placeholder="username"></label>
+                        <label for="user" id="user"><input type="text" name="username" autocomplete="username" placeholder="username"></label>
                     </div>
-                    <div class="textField"><label for="pass" id="pass"><input type="password" placeholder="password"></label></div>
-                    <div class="textField"><button id="login">Login</button></div>
+                    <div class="textField"><label for="pass" id="pass"><input type="password" autocomplete="current-password" placeholder="password"></label></div>
+                    <div class="textField"><button id="loginBtn">Login</button></div>
                 </div>
             </div>
         </form>
     </div>
-    <script src="js/functions.js"></script>
+    <script src="login.js"></script>
 </body>
 
 </html>

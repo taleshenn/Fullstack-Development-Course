@@ -20,7 +20,12 @@ body {
     align-items: center;
     flex-direction: column;
 }
-h1, p, label, input{
+h1, p, label{
+    color: bisque;
+    text-align: center;
+    text-transform: uppercase;
+}
+input{
     color: bisque;
     text-align: center;
 }
@@ -47,19 +52,16 @@ h1, p, label, input{
     align-content: center;
 }
 .textField, #user,#pass {
-    margin: 10px 0px;
+    margin: 3px 0px;
     width: 100%;
     flex-direction: column;
     display:flex;
     justify-content: center;
     align-items: center;
-
-
 }
 input {
-    width: 80%;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 10px;
     background-color: aqua;
     color: #2d2239 ;
@@ -67,17 +69,17 @@ input {
     box-shadow: 0px 10px 40px #1e0f2c;
     margin: 5px 0px;
 }
-#login {
-width: 60%;
-padding: 15px 0px;
-border-radius: 20px;
-border: none;
-outline: none;
-text-transform: uppercase;
-font-weight: 800;
-letter-spacing: 3px;
-color: #2d2239;
-background-color: bisque;
-box-shadow: 0px 10px 40px #1e0f2c;
-cursor: pointer;
+#loginBtn {
+    width: 80%;
+    padding: 15px 0px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2d2239;
+    background-color: bisque;
+    box-shadow: 0px 10px 40px #1e0f2c;
+    cursor: pointer;
 }
