@@ -1,5 +1,5 @@
 export const aluno = 'Cindy'
 
-export function imprime () {
+export default function imprime () {
     console.log('manoiti')
 }

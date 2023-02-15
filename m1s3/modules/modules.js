@@ -1,4 +1,4 @@
-import { aluno, imprime } from "./variables.js";
+import imprime, * as variable from "./variables.js";
+console.log(variable.aluno);
 
-console.log(aluno);
-imprime();
+console.log(imprime());
