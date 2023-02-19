@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.cardMain {
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+    background-color: #2e2439;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+.cardLeft {
+    color: aqua;
+    background-color: #292231;
+    flex-direction: column;
+    display: flex;
+    padding: 30px 35px;
+    box-shadow: 0px 10px 20px #1e0f2c;
+    border-radius: 20px;
+}
+
+.cardDescriptionWrap {
+    line-height: 5px;
+    align-items: center;
+}
+
+.cardDescriptionTitle {
+    color: #ffb300;
+    font-weight: 800;
+    line-height: 5px;
+    text-align: center;
+}
+#avatar {
+    box-shadow: 0px 5px 10px #1e0f2c;
+    border-radius: 20px;
+    border: 3px solid #ffb300;
+}
+
+h3 {
+    color: rgb(255, 213, 151);
+    font-size: small;
+    padding-top: 10px;
+}
+
+h2 {
+    color: #ffb300;
+    font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+    line-height: 5px;
+    text-align: center;
+}
