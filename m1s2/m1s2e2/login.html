@@ -17,15 +17,15 @@
                 <img src="login.png" width="50px" alt="avatar">
                 <p>[M1S02] Ex2 - Criar login</br>[App LoginStart]</p>
                 <h1>Login</h1>
-                <form>
+                <form id="loginForm">
                     <div class="textField">
-                        <input id="user" type="text" placeholder="username">
+                        <input id="user" name="user" type="text" placeholder="username">
                     </div>
                     <div class="textField">
-                        <input id="pass" type="password" placeholder="password">
+                        <input id="pass" name="pass" type="password" placeholder="password">
                     </div>
                     <div class="textField">
-                        <input id="btn" type="submit" onclick="loginFake()" value="Login">
+                        <input id="btn" name="login" type="submit" onclick="loginFake()" value="Login">
                     </div>
                 </form>
             </div>
