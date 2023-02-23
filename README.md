@@ -1,4 +1,5 @@
 # Full Stack Development Course
+
  <div>
     <h2 style="text-align: center;">SENAI/SC Lab365</h2>
   </div>
@@ -37,6 +38,15 @@
           <td>02</td>
           <td>06/feb - 10/feb</td>
           <td><a href="/m1s2">Link</a></td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>13/feb - 17/feb</td>
+          <td><a href="/m1s3">Link</a></td>
+        <tr>
+          <td>04</td>
+          <td>21/feb - 24/feb</td>
+          <td><a href="/m1s4">Link</a></td>
         </tr>
       </tbody>
     </table>
