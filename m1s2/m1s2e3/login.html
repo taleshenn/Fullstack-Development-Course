@@ -15,23 +15,23 @@
         <div class="loginRight">
             <div class="loginCard">
                 <img src="login.png" width="50px" alt="avatar">
-                <p>[M1S02] Ex 3 - Salvar login </br>no LocalStorage</br>[App LoginStart]</p>
-                <h1>register</h1>
-                <form id="registerForm">
+                <p>[M1S02] Ex 3 - Salvar login no LocalStorage</br>[App LoginStart]</p>
+                <h1>Login</h1>
+                <form id="loginForm">
                     <div class="textField">
-                        <input id="user" type="text" placeholder="username">
+                        <input id="user" name="user" type="text" placeholder="username">
                     </div>
                     <div class="textField">
-                        <input id="pass" type="password" placeholder="password">
+                        <input id="pass" name="pass" type="password" placeholder="password">
                     </div>
                     <div class="textField">
-                        <input id="btn" type="submit" value="send">
+                        <input id="btn" name="login" type="submit" onclick="loginFake()" value="Login">
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <script src="register.js"></script>
+    <script src="login.js"></script>
 </body>
 
 </html>
