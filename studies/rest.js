@@ -15,9 +15,9 @@ No exemplo acima, a função somar recebe um número indeterminado de argumentos
 Dentro da função, os argumentos são acessados como um array chamado meuArray. 
 Em seguida, a função percorre o array com um loop 'FOR' para somar seus elementos.
 
-Em resumo, o código define uma função chamada 'somar' que utiliza o operador rest para receber um número variável de argumentos. 
-A função itera sobre os argumentos utilizando um loop 'FOR' e adiciona cada um deles a uma variável chamada 'soma'. 
-Por fim, a função retorna o valor da soma.
+Em resumo, o código define uma função chamada 'somar' que utiliza o operador rest para receber um número variável 
+de argumentos. A função itera sobre os argumentos utilizando um loop 'FOR' e 
+adiciona cada um deles a uma variável chamada 'soma'. Por fim, a função retorna o valor da soma.
 
 */
 
@@ -41,6 +41,14 @@ elemento do array meuArray, que foi criado anteriormente usando o operador rest.
 */
 	for (let i = 0; i < meuArray.length; i++) {
 /*
+A variável "i" foi criada com o valor inicial de 0 porque ela será usada como índice 
+para percorrer o array meuArray e acessar cada um de seus elementos. 
+No início do loop, o valor de "i" é igual a 0 e, a cada iteração, 
+ele é incrementado em 1 com o operador i++. Isso permite que a cada passo do loop, 
+a variável "i" assuma um valor diferente e seja usada para acessar o elemento correspondente no array, 
+utilizando a sintaxe meuArray[i]. Assim, o loop percorre todos os elementos do array, 
+somando-os à variável soma e retornando o resultado no final.
+
 A condição "i < meuArray.length" verifica se o valor da variável "i" é menor do que o comprimento do array. 
 Isso garante que o loop só será executado enquanto houver elementos no array ainda não percorridos.
 
