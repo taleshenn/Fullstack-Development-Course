@@ -25,6 +25,20 @@ Permitem organizar ou agrupar os tipos dados acima e os manipular de maneira mai
 • WeakMap //- um objeto semelhante a um mapa, mas em que as chaves são fracamente referenciadas e podem ser removidas pelo coletor de lixo.
 • WeakSet //- um objeto semelhante a um conjunto, mas em que os valores são fracamente referenciados e podem ser removidos pelo coletor de lixo. */
 
+OBSERVAÇÃO
+/* Não vou incluir nesse momento o estudo sobre WeakSet e WeakMap mas segue uma breve leitura sobre essas estruturas.
+O aprendizado sobre o WeakSet e o WeakMap pode ser importante para certas situações em que a gestão de memória é crítica. 
+Essas estruturas de dados têm como característica principal a possibilidade de manter referências fracas (weak references) aos objetos,
+o que significa que esses objetos podem ser coletados pelo garbage collector se não houver outras referências fortes a eles.
+
+Embora o uso do WeakSet e do WeakMap possa ser menos comum em comparação com outras estruturas de dados, é importante entender
+as suas características e como elas podem ser aplicadas em certos contextos. Alguns casos de uso comuns incluem o gerenciamento 
+de caches de dados ou a associação de metadados a objetos sem aumentar o risco de vazamento de memória.
+
+Em resumo, o aprendizado sobre o WeakSet e o WeakMap pode ser útil em situações específicas em que a gestão de memória é uma preocupação
+e é importante garantir que objetos não sejam mantidos na memória desnecessariamente.
+*/
+
 DETALHANDO AS ESTRUTURAS DE DADOS
 
 • ARRAYS
@@ -209,9 +223,154 @@ Ou seja, todo método é uma função mas nem todas as funções são métodos. 
 
 
 
-ESSE COMPILADO CONTINUARÁ em breve com 
+SET
+/* O Set é uma coleção não ordenada de valores únicos. 
+Isso significa que ele permite armazenar valores únicos de qualquer tipo, 
+incluindo valores primitivos e objetos. 
+Os valores em um Set são exclusivos, ou seja, um valor só pode estar presente uma vez no Set.
+Para criar um Set, você pode simplesmente usar o operador new junto com a palavra-chave Set, 
+semelhante à criação de um objeto.*/
 
-Set
-Map
-WeakSet
-WeakMap
+const meuSet = new Set();
+
+/* Para adicionar um valor ao Set, usa-se o método add(). 
+Por exemplo, para adicionar uma string "hello" e um número 42 ao Set, você pode fazer assim: */
+
+meuSet.add("hello");
+meuSet.add(42);
+
+// Também é possível passar uma matriz de valores ao construtor do Set:
+
+const meuSet = new Set([1, 2, 3, 4, 5]);
+
+// Para verificar se um valor está presente no Set, usa-se o método has(). 
+// Por exemplo, para verificar se o valor 42 está presente em meuSet, você pode fazer assim:
+
+if (meuSet.has(42)) {
+	console.log("O valor 42 está presente em meuSet.");
+  }
+
+// Para remover um valor do Set, usa-se o método delete().
+// Por exemplo, para remover o valor "hello" de meuSet, você pode fazer assim:
+
+meuSet.delete("hello");
+
+// Você também pode usar o método clear() para remover todos os valores do Set:
+
+meuSet.clear();
+
+// Por fim, você pode iterar pelos valores em um Set usando o método forEach(). 
+// Por exemplo, para imprimir todos os valores em meuSet, você pode fazer assim:
+
+meuSet.forEach(valor => {
+	console.log(valor);
+  });
+
+O SET É USADO /* para armazenar coleções de valores únicos. 
+Isso significa que um valor pode ocorrer apenas uma vez em um Set, 
+independentemente de como foi adicionado. 
+O Set é útil em situações onde você precisa armazenar uma lista de valores únicos, 
+sem se preocupar com a ordem em que eles são armazenados.
+
+Por exemplo, você pode usar um Set para armazenar uma lista de IDs de usuários em um sistema, 
+garantindo que cada ID apareça apenas uma vez.
+
+Aqui está um exemplo de como usar um Set para armazenar uma lista de valores únicos:
+*/
+
+const meuSet = new Set();
+
+meuSet.add(1);
+meuSet.add(2);
+meuSet.add(3);
+meuSet.add(3); // este valor não será adicionado novamente, pois já existe no Set
+
+console.log(meuSet); // Set { 1, 2, 3 }
+
+
+O SET EM RESUMO 
+/*
+• Elementos no Set são únicos, sso significa que não há duplicatas permitidas.
+• Valores NaN são considerados iguais entre si no Set. Isso significa que o Set só pode ter um único valor NaN.
+• A ordem dos elementos não é garantida: Isso ocorre porque os elementos são armazenados internamente em uma tabela hash, 
+o que significa que a ordem de inserção não é necessariamente a ordem em que os elementos são armazenados.
+• O tamanho do Set pode ser encontrado usando a propriedade "size" assim como em um Map.
+• Os valores em um Set podem ser iterados usando "for...of". Isso pode ser útil para realizar operações em todos os elementos do Set.
+• O método "forEach" pode ser usado em um Set para executar uma determinada função em cada elemento do Set.
+• Os elementos em um Set são comparados usando "SameValueZero" (mesmo valor zero): 
+para determinar se dois valores são iguais dentro de um Set, é usada a mesma comparação usada no operador "===" (SameValueZero).
+*/
+
+
+MAP
+/* O Map é uma estrutura de dados que permite armazenar pares chave-valor, onde as chaves e os valores podem ser de qualquer tipo. 
+A principal diferença do Map em relação ao Object é que as chaves do Map podem ser de qualquer tipo, não apenas strings ou símbolos.
+*/
+
+// Para criar um Map vazio, podemos usar a sintaxe new Map().
+const meuMap = new Map();
+
+// Em seguida, podemos adicionar pares chave-valor usando o método set(chave, valor). 
+meuMap.set('chave1', 'valor1');
+meuMap.set(2, 'valor2');
+meuMap.set({chave: 'chave3'}, 'valor3');
+
+// Para recuperar o valor de uma chave, usamos o método get(chave).
+console.log(meuMap.get('chave1')); // 'valor1'
+console.log(meuMap.get(2)); // 'valor2'
+console.log(meuMap.get({chave: 'chave3'})); // undefined
+
+// Podemos verificar se uma chave existe usando o método has(chave)
+console.log(meuMap.has('chave1')); // true
+console.log(meuMap.has('chave2')); // false
+
+// Podemos remover uma entrada do Map usando o método delete(chave)
+meuMap.delete('chave1');
+
+// Também podemos obter o número de entradas no Map usando a propriedade size.
+console.log(meuMap.size); // 2
+
+// O método clear remove todos os elementos do Map:
+meuMap.set('chave1', 'valor1');
+meuMap.clear(); // limpa o mapa
+
+// O método forEach() é chamado diretamente no objeto Map e recebe uma função de callback como parâmetro:
+const meuMap = new Map();
+meuMap.set('chave1', 'valor1');
+meuMap.set('chave2', 'valor2');
+
+meuMap.forEach(function(valor, chave) {
+  console.log(chave + ': ' + valor);
+});
+// Output:
+// chave1: valor1
+// chave2: valor2
+
+// Ou ainda usando arrow functions:
+
+const meuMap = new Map();
+meuMap.set('chave1', 'valor1');
+meuMap.set('chave2', 'valor2');
+
+meuMap.forEach((valor, chave) => console.log(chave + ': ' + valor));
+// Output:
+// chave1: valor1
+// chave2: valor2
+
+
+O MAP é útil /*  para armazenar dados que precisam ser acessados de forma rápida e eficiente por meio de uma chave.
+Algumas situações em que o MAP pode ser útil incluem:
+• Armazenamento de informações de configuração do aplicativo, como parâmetros de conexão com o banco de dados, chaves de API, etc;
+• Armazenamento de dados de usuários, como nomes, endereços de e-mail, senhas criptografadas, etc;
+• Armazenamento de informações de localização, como endereços, coordenadas geográficas, etc;
+• Armazenamento de dados temporários usados em operações específicas do aplicativo. */
+
+A escolha entre o uso de Object e Map /*depende do que você precisa para a sua implementação. 
+O objeto é uma estrutura de dados simples que permite armazenar pares de chave-valor, enquanto 
+o Map permite que as chaves sejam de qualquer tipo, incluindo objetos e funções, e oferece alguns recursos extras, 
+como a ordem de inserção e iteração de elementos.
+
+Sendo assim, se você precisa armazenar pares de chave-valor simples e a ordem dos elementos não importa, 
+o Object é uma escolha adequada. Por outro lado, se você precisa trabalhar com chaves de tipos diversos ou se 
+a ordem de inserção e iteração dos elementos é importante, o Map é a opção mais indicada.
+*/
