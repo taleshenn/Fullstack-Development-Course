@@ -91,7 +91,3 @@ console.log(intervalo);
 // que chama "General Kenobi!" pois ele foi declarado
 //descomentar para ver
 clearInterval(intervalo);
-
-///////////////////////////////////////////////////
-// Spread
-///////////////////////////////////////////////////
