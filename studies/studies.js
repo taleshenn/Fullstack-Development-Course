@@ -6,6 +6,7 @@ console.log("Estudo de json");
 let testeJson = '{"nome": "tales" , "sobrenome": "henn"}';
 //confirmei que é uma string
 console.log(typeof testeJson);
+
 console.log(testeJson);
 
 //converti em objeto
@@ -89,7 +90,7 @@ console.log(intervalo);
 // abaixo só vai funcionar para o segundo exemplo
 // que chama "General Kenobi!" pois ele foi declarado
 //descomentar para ver
-//clearInterval(intervalo);
+clearInterval(intervalo);
 
 ///////////////////////////////////////////////////
 // Spread
