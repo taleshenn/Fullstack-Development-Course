@@ -86,11 +86,18 @@ sort(); //- classifica os valores do array em ordem alfabética ou numérica.
 arrayConcatenado.sort();
 console.log(arrayConcatenado); // [0, 1, 3, 4, 5, 6, 7]
 
+filter(); //cria um novo array a partir de outro, contendo somente os elementos que satisfazem uma determinada condição
+const numeros = [1, 2, 3, 4, 5];
+const numerosPares = numeros.filter(function(numero) {
+  return numero % 2 === 0;
+});
+console.log(numerosPares); // [2, 4]
+
 reverse(); //- inverte a ordem dos valores do array.
 arrayConcatenado.reverse();
 console.log(arrayConcatenado); // [7, 6, 5, 4, 3, 1, 0]
 
-forEach(); //- executa uma função para cada elemento do array.
+forEach(); //- percorre e executa uma função para cada elemento do array.
 arrayConcatenado.forEach((valor) => {
 	console.log(valor * 2);
 });
