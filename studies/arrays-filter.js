@@ -117,3 +117,32 @@ Para transformar os elementos de um array, o método map é mais adequado.
 Para reduzir um array a um único valor, o método reduce é uma boa opção.
 
 */
+
+/*
+Por exemplo, para retornar um array com as pessoas com idade maior ou igual a 30, podemos fazer o seguinte:
+*/
+
+const pessoas = [
+  { nome: 'João', idade: 25 },
+  { nome: 'Maria', idade: 30 },
+  { nome: 'Pedro', idade: 40 },
+  { nome: 'Paulo', idade: 20 },
+  { nome: 'Ana', idade: 35 },
+];
+
+// nesse exemplo, primeiro foi utilizado o método filter() para buscar as pessoas 
+// e retornar um array com o NOME e IDADE das pessoas MAIORES ou IGUAIS a 30  
+const pessoasMaisDe30 = pessoas.filter(pessoa => pessoa.idade >= 30);
+console.log(pessoasMaisDe30); // [{ nome: 'Maria', idade: 30 }, { nome: 'Pedro', idade: 40 }, { nome: 'Ana', idade: 35 }]
+
+// e nesse outro para retornar um array com o
+// NOME e IDADE das pessoas com idade MENOR que 30.
+const pessoasMenosDe30 = pessoas.filter(pessoa => pessoa.idade < 30);
+console.log(pessoasMenosDe30); // [{ nome: 'João', idade: 25 }, { nome: 'Paulo', idade: 20 }]
+
+// Depois, foi utilizado o método map() para retornar APENAS os NOMES 
+// das pessoas em cada um desses arrays.
+const nomesPessoasMenores30 = pessoasMenosDe30.map(pessoa => pessoa.nome);
+
+console.log(nomesPessoasMenores30);
+// Saída: ["João", "Paulo"]
