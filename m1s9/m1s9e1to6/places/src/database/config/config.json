@@ -1,9 +1,0 @@
-{
-	"development": {
-		"username": "postgres",
-		"password": "855321",
-		"database": "trindade_places",
-		"host": "localhost",
-		"dialect": "postgres"
-	}
-}
