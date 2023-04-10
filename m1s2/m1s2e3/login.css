@@ -83,9 +83,9 @@ input {
     margin: 5px 0px;
 }
 
-#btn {
-    width: 100%;
-    padding: 15px 0px;
+#btn,
+#logoutButton {
+    padding: 15px 20px;
     border-radius: 20px;
     border: none;
     outline: none;

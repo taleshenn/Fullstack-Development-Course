@@ -1,18 +1,52 @@
-function loginFake() {
-	// .value to get the data from the input username
-	let userFake = document.querySelector("#user").value;
-	// .value to call the function loginFake
-	let passwordFake = document.querySelector("#pass").value;
-	// event onclick to get the data from the input password
+// verifica se as credenciais já existem no localStorage
+function checkCredentials() {
+	const username = localStorage.getItem("username");
+	const password = localStorage.getItem("password");
 
-	if (userFake == "admin" && passwordFake == "admin") {
-		addEventListener("submit", (event) => {
-			event.preventDefault();
-			//alert(`Logged in as ${userFake} with the password ${passwordFake}`);
-			console.log(`Logged in as ${userFake} with the password ${passwordFake}`);
-		});
-	} else {
-		event.preventDefault();
-		console.log("Incorrect credentials");
+	if (username && password) {
+		// redireciona para a página de logout
+		window.location.href = "logout.html";
 	}
+}
+
+// salva as credenciais no localStorage e redireciona para a página de logout
+function saveCredentials(username, password) {
+	localStorage.setItem("username", username);
+	localStorage.setItem("password", password);
+	window.location.href = "logout.html";
+}
+
+// função que é executada quando o formulário é submetido
+function handleFormSubmit(event) {
+	event.preventDefault();
+	const username = document.querySelector("#user").value;
+	const password = document.querySelector("#pass").value;
+
+	// verifica se as credenciais estão corretas
+	if (username === "admins" && password === "admins") {
+		// salva as credenciais no localStorage
+		saveCredentials(username, password);
+	} else {
+		alert("Usuário ou senha inválidos");
+	}
+}
+
+// função para fazer logout, removendo as credenciais do localStorage
+function logout() {
+	localStorage.removeItem("username");
+	localStorage.removeItem("password");
+	window.location.href = "login.html";
+}
+
+// verifica se as credenciais já existem no localStorage ao carregar a página
+window.addEventListener("load", checkCredentials);
+
+// adiciona o evento de submit no formulário
+const form = document.querySelector("#loginForm");
+form.addEventListener("submit", handleFormSubmit);
+
+// adiciona o evento de click no botão de logout
+const logoutButton = document.querySelector("#logoutButton");
+if (logoutButton) {
+	logoutButton.addEventListener("click", logout);
 }
