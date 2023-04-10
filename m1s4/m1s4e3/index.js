@@ -32,9 +32,17 @@ class Conta {
 	}
 }
 
-const contaCorrente = new Conta("123456", 40);
+class ContaPoupança extends Conta {
+	constructor(senha, saldo = 0) {
+		super(senha, saldo);
+	}
 
-contaCorrente.deposito("123456", 50);
-contaCorrente.extrato();
-contaCorrente.retirada("123456", 55);
-contaCorrente.extrato();
+	atualizaJuros() {
+		this.#saldo = this.#saldo + this.#saldo * 0.007;
+	}
+}
+
+const contaPoupanca = new ContaPoupança("123456", 100);
+contaPoupanca.extrato(); // Imprime 100
+contaPoupanca.atualizaJuros();
+contaPoupanca.extrato(); // Imprime 100.7
