@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.loginMain {
+    width: 100wh;
+    height: 100vh;
+    background-color: #2d2239;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginleft {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1,
+p,
+label {
+    color: bisque;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input {
+    color: bisque;
+    text-align: center;
+}
+
+.loginRight {
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginCard {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+    box-shadow: 0px 10px 20px #1e0f2c;
+    border-radius: 20px;
+}
+
+.loginCard>h1 {
+    color: aqua;
+    display: flex;
+    align-content: center;
+}
+
+.textField,
+#user,
+#pass {
+    margin: 3px 0px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: aqua;
+    color: #2d2239;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #1e0f2c;
+    margin: 5px 0px;
+}
+
+#btn,
+#logoutButton,
+#salvarButton {
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2d2239;
+    background-color: bisque;
+    box-shadow: 0px 10px 40px #1e0f2c;
+    cursor: pointer;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Week 02 Exercises</title>
+</head>
+
+<body>
+    <div class="loginMain">
+        <div class="loginLeft"></div>
+        <div class="loginRight">
+            <div class="loginCard">
+                <img src="login.png" width="50px" alt="avatar" />
+                <p>
+                    [M1S02] Ex 3 - Salvar login no LocalStorage</br>[App LoginStart]
+                </p>
+                <form action="" id="profile-form">
+                    <section class="header">
+                        <img src="" id="avatar-photo" />
+                        <h1 id="user-name"></h1>
+                    </section>
+                    <section class="body">
+                        <div>
+                            <div>
+                                <input type="text" name="display-name" placeholder="Usuário" id="display-name"
+                                    autocomplete="off" />
+                            </div>
+                            <div>
+                                <input type="password" name="old-password" placeholder="Senha atual" id="old-password"
+                                    autocomplete="off" />
+                            </div>
+                            <div>
+                                <input type="password" name="new-password" placeholder="Senha nova" id="new-password"
+                                    autocomplete="off" />
+                            </div>
+                        </div>
+                    </section>
+                    <section class="footer">
+                        <div class="textField">
+                            <button onclick="store()" id="salvarButton">Salvar</button>
+                        </div>
+                    </section>
+                </form>
+
+                <h1>LOGOUT</h1>
+                <p>Você está prestes a sair</p>
+
+                <div class="textField">
+                    <input id="logoutButton" name="logout" type="submit" value="Fazer Logout" />
+                </div>
+            </div>
+
+            <script>
+                function removeCredentials() {
+                    localStorage.removeItem("username");
+                    localStorage.removeItem("password");
+                }
+
+                document
+                    .querySelector("#logoutButton")
+                    .addEventListener("click", () => {
+                        removeCredentials();
+                        window.location.href = "login.html";
+                    });
+
+                function store() {
+                    const oldPassword = localStorage.getItem("password");
+                    const newPassword = document.querySelector("#new-password").value;
+                    const currentPassword = document.querySelector("#old-password").value;
+
+                    if (currentPassword === oldPassword) {
+                        localStorage.setItem("password", newPassword);
+                        alert("Senha atualizada com sucesso");
+                    } else {
+                        alert("Senha atual incorreta");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
