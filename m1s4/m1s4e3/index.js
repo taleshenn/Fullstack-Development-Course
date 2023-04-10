@@ -1,4 +1,4 @@
-class Conta {
+class conta {
 	#senha;
 	#saldo;
 
@@ -32,17 +32,11 @@ class Conta {
 	}
 }
 
-class ContaPoupança extends Conta {
+class contaPoupanca extends conta {
 	constructor(senha, saldo = 0) {
 		super(senha, saldo);
 	}
-
-	atualizaJuros() {
-		this.#saldo = this.#saldo + this.#saldo * 0.007;
-	}
 }
 
-const contaPoupanca = new ContaPoupança("123456", 100);
+const contaPoupanca = new contaPoupanca("123456", 100);
 contaPoupanca.extrato(); // Imprime 100
-contaPoupanca.atualizaJuros();
-contaPoupanca.extrato(); // Imprime 100.7
