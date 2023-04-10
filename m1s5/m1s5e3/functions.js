@@ -1,107 +1,35 @@
-// console.log("hello");
+const lista = ["Pedro", "José", "Aderbal", "Danilo", "Luisa", "Vitoria"];
 
-class Pessoa {
-	constructor(nome, idade) {
-		// <== atributos
-		this.nome = nome;
-		this.idade = idade;
+function adicionarNomes(nomes) {
+	// Verifica se foi enviado um valor válido para a função
+	if (!nomes || !Array.isArray(nomes) || nomes.length === 0) {
+		console.log(
+			"Erro: É necessário enviar um ou mais nomes em formato de array."
+		);
+		return;
 	}
-	falar() {
-		console.log("hello there");
+
+	// Verifica se todos os nomes enviados são strings
+	const nomesInvalidos = nomes.filter((nome) => typeof nome !== "string");
+	if (nomesInvalidos.length > 0) {
+		console.log("Erro: Os nomes enviados devem ser do tipo string.");
+		return;
 	}
+
+	// Verifica se algum nome já existe na lista
+	const nomesDuplicados = nomes.filter((nome) => lista.includes(nome));
+	if (nomesDuplicados.length > 0) {
+		console.log("Erro: Um ou mais nomes enviados já existe na lista.");
+		return;
+	}
+
+	// Adiciona os nomes na lista
+	lista.push(...nomes);
+	console.log("Nova lista:", lista);
 }
-let aluno = new Pessoa("tales", 47);
-aluno.falar();
 
-class Pessoa {
-	constructor(nome, idade) {
-		this.nome = nome;
-		this.idade = idade;
-	}
-
-	falar() {
-		console.log("olá mundo");
-	}
-}
-
-// class Pessoa {
-//     constructor(nome, idade) {
-//       this.nome = nome;
-//       this.idade = idade;
-//     }
-
-//     falar() {
-//       console.log("olá mundo");
-//     }
-//   }
-
-//   class Professor extends Pessoa {
-//     constructor(nome, idade, materia, falar) {
-//       super(nome, idade, falar);
-//       this.materia = materia;
-//       this.nome = 'walberson'
-//     }
-//     darAula() {
-//       console.log("agora vamos dar aula de " + this.materia);
-//     }
-//     falar(){
-//       console.log("OLA MUNDOOOOOOOO!!!!");
-//     }
-//   }
-//   const walberson = new Professor("william", 18, "geografia");
-//   console.log(walberson.nome);
-///////// abastracao
-// class Parafuso {
-//   constructor(){
-//     this.name = 'tales'
-//     if(this.constructor === Parafuso){
-//       throw new Error('Classe abstrata, não pode ser instanciada')
-//     }
-//   }
-//   get tipo() {
-//     throw new Error ('Método abstrato, precisa ser implementado')
-//   }
-// }
-
-// class Fenda extends Parafuso {
-//   constructor() {
-//     super()
-//   }
-//   get tipo(){
-//     return 'fenda'
-//   }
-// }
-
-// class Philips extends Parafuso {
-//   constructor() {
-//     super()
-//   }
-//   get tipo(){
-//     return 'philips'
-//   }
-// }
-// class Allen extends Parafuso {
-
-// }
-// let parafuso = new Parafuso()
-// console.log(parafuso)
-// let allen = new Allen()
-
-// console.log(allen.tipo)
-
-////static
-// class Tipo {
-//   constructor (altura,largura){
-//     this.altura = altura
-//     this.largura = largura
-//   }
-//   static multiply (altura=this.altura,largura=this.largura){
-//     this.altura = altura
-//     this.largura = largura
-//     return this.altura * this.largura
-//   }
-// }
-
-// const multi = new Tipo(2,2)
-// //console.log(multi.multiply(2,2))
-// console.log(Tipo.multiply(2,2))
+// Exemplo de uso
+adicionarNomes(["Marcelo", "Sandra"]); // Adiciona 'Marcelo' e 'Sandra' na lista
+adicionarNomes(["Pedro", "Maria"]); // Retorna mensagem de erro, 'Pedro' já existe na lista
+adicionarNomes([42, "João"]); // Retorna mensagem de erro, '42' não é uma string
+adicionarNomes([]); // Retorna mensagem de erro, nenhum nome foi enviado
