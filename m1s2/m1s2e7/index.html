@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="script.js" defer></script>
+  <title>M1S02-Ex02</title>
 </head>
 
 <body>
-    <h1>Use f12</h1>
-    <script src="functions.js"></script>
+  <main>
+    <form id="login-form">
+      <section class="login-title-area">
+        <h2 class="login-title">PadariaTech</h2>
+      </section>
+      <section class="body">
+        <span id="enter-value">Insira o valor: </span>
+        <input type="text" id="cash" autocomplete="off" placeholder="R$ xx,xx" />
+        <input type="submit" value="Gerar Tabela" />
+      </section>
+      <section class="container-btn"></section>
+      <span id="msg-area"></span>
+    </form>
+  </main>
 </body>
 
 </html>
