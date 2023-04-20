@@ -1,107 +1,19 @@
-// console.log("hello");
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
 
-class Pessoa {
-	constructor(nome, idade) {
-		// <== atributos
-		this.nome = nome;
-		this.idade = idade;
-	}
-	falar() {
-		console.log("hello there");
-	}
-}
-let aluno = new Pessoa("tales", 47);
-aluno.falar();
+// Middleware para fazer o parse do corpo da requisição
+app.use(bodyParser.json());
 
-class Pessoa {
-	constructor(nome, idade) {
-		this.nome = nome;
-		this.idade = idade;
-	}
+// Rota para receber um objeto pelo corpo da requisição
+app.post("/api/objeto", (req, res) => {
+	// Captura o objeto enviado no corpo da requisição
+	const objeto = req.body;
+	// Envia o objeto como resposta no formato JSON
+	res.json(objeto);
+});
 
-	falar() {
-		console.log("olá mundo");
-	}
-}
-
-// class Pessoa {
-//     constructor(nome, idade) {
-//       this.nome = nome;
-//       this.idade = idade;
-//     }
-
-//     falar() {
-//       console.log("olá mundo");
-//     }
-//   }
-
-//   class Professor extends Pessoa {
-//     constructor(nome, idade, materia, falar) {
-//       super(nome, idade, falar);
-//       this.materia = materia;
-//       this.nome = 'walberson'
-//     }
-//     darAula() {
-//       console.log("agora vamos dar aula de " + this.materia);
-//     }
-//     falar(){
-//       console.log("OLA MUNDOOOOOOOO!!!!");
-//     }
-//   }
-//   const walberson = new Professor("william", 18, "geografia");
-//   console.log(walberson.nome);
-///////// abastracao
-// class Parafuso {
-//   constructor(){
-//     this.name = 'tales'
-//     if(this.constructor === Parafuso){
-//       throw new Error('Classe abstrata, não pode ser instanciada')
-//     }
-//   }
-//   get tipo() {
-//     throw new Error ('Método abstrato, precisa ser implementado')
-//   }
-// }
-
-// class Fenda extends Parafuso {
-//   constructor() {
-//     super()
-//   }
-//   get tipo(){
-//     return 'fenda'
-//   }
-// }
-
-// class Philips extends Parafuso {
-//   constructor() {
-//     super()
-//   }
-//   get tipo(){
-//     return 'philips'
-//   }
-// }
-// class Allen extends Parafuso {
-
-// }
-// let parafuso = new Parafuso()
-// console.log(parafuso)
-// let allen = new Allen()
-
-// console.log(allen.tipo)
-
-////static
-// class Tipo {
-//   constructor (altura,largura){
-//     this.altura = altura
-//     this.largura = largura
-//   }
-//   static multiply (altura=this.altura,largura=this.largura){
-//     this.altura = altura
-//     this.largura = largura
-//     return this.altura * this.largura
-//   }
-// }
-
-// const multi = new Tipo(2,2)
-// //console.log(multi.multiply(2,2))
-// console.log(Tipo.multiply(2,2))
+// Inicia o servidor na porta 3000
+app.listen(3000, () => {
+	console.log("Servidor iniciado na porta 3000");
+});
