@@ -1,38 +1,47 @@
-class Padaria {
+class Bakery {
 	constructor() {}
 
-	addEstoque(produto, quantidade) {
-		localStorage.setItem(produto, quantidade);
+	addStock(product, quantity) {
+		const currentStock = localStorage.getItem(product);
+		const newQuantity = currentStock
+			? parseInt(currentStock) + quantity
+			: quantity;
+		localStorage.setItem(product, newQuantity);
 	}
 
-	compra(produto, quantidade) {
-		const estoque = localStorage.getItem(produto);
+	purchase(product, quantity) {
+		const stock = localStorage.getItem(product);
 
-		if (estoque >= quantidade) {
-			const novoEstoque = estoque - quantidade;
-			localStorage.setItem(produto, novoEstoque);
-			console.log(`${quantidade} unidades de ${produto} compradas`);
+		if (stock) {
+			const currentStock = parseInt(stock);
+			if (currentStock >= quantity) {
+				const newStock = currentStock - quantity;
+				localStorage.setItem(product, newStock);
+				console.log(`${quantity} units of ${product} purchased`);
+			} else {
+				console.log(`Insufficient stock for ${quantity} units of ${product}`);
+			}
 		} else {
-			console.log(`Não há ${quantidade} unidades de ${produto} em estoque`);
+			console.log(`${product} not found in stock`);
 		}
 	}
 
-	verEstoque() {
+	viewStock() {
 		for (let i = 0; i < localStorage.length; i++) {
-			const produto = localStorage.key(i);
-			const quantidade = localStorage.getItem(produto);
-			console.log(`${produto}: ${quantidade}`);
+			const product = localStorage.key(i);
+			const quantity = localStorage.getItem(product);
+			console.log(`${product}: ${quantity}`);
 		}
 	}
 }
 
-const padaria = new Padaria();
+const bakery = new Bakery();
 
-padaria.addEstoque("Pão", 10);
-padaria.addEstoque("Bolo", 5);
+bakery.addStock("Pie", 8);
+bakery.addStock("Muffins", 6);
 
-padaria.compra("Pão", 3);
-padaria.compra("Bolo", 2);
-padaria.compra("Pão", 8);
+bakery.purchase("Pie", 4);
+bakery.purchase("Muffins", 7);
+bakery.purchase("Pie", 3);
 
-padaria.verEstoque();
+bakery.viewStock();
