@@ -5,7 +5,7 @@ async function updatePlace(res, req) {
 		const updateData = await Place.findByPk(req.params.id);
 
 		if (!updateData) {
-			return res.status(404).json({ message: "Dado não encontrado." });
+			return res.status(404).json({ message: "Dado não encontrado" });
 		}
 
 		updateData.name = req.body.name || updatePlace.name;
@@ -15,9 +15,7 @@ async function updatePlace(res, req) {
 
 		res.json(updatePlace);
 	} catch (error) {
-		res
-			.status(500)
-			.json({ message: "Não foi possível executar sua solicitação" });
+		res.status(500).json({ message: "Não foi possível atualizar o dado" });
 	}
 }
 

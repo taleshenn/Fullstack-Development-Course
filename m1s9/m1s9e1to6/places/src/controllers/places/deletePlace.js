@@ -8,11 +8,9 @@ async function deletePlace(req, res) {
 			},
 		});
 
-		res.status(200).json({ message: "Deletado com sucesso." });
+		res.status(200).json({ message: "Deletado com sucesso" });
 	} catch (error) {
-		res
-			.status(500)
-			.json({ message: "Não foi possível executar sua solicitação" });
+		res.status(500).json({ message: "Não foi possível deletar este local" });
 	}
 }
 

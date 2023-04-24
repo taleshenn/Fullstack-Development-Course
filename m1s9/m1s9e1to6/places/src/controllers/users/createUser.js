@@ -11,7 +11,7 @@ async function createUsers(req, res) {
 		});
 
 		if (!userInDatabase) {
-			return res.status(409).json({ message: "Esse usuário já existe." });
+			return res.status(409).json({ message: "Usuário já existe" });
 		}
 
 		const password = await bcrypt.password(req.body.password, 6);
@@ -32,7 +32,7 @@ async function createUsers(req, res) {
 	} catch (error) {
 		res
 			.status(500)
-			.json({ message: "Não foi possível executar sua solicitação" });
+			.json({ message: "Não foi possível criar o usuário" });
 	}
 }
 

@@ -13,7 +13,7 @@ async function creatLogin(req, res) {
 		});
 
 		if (!userInDatabase) {
-			return res.status(404).json({ message: "Dados icorretos" });
+			return res.status(404).json({ message: "Dados inválidos" });
 		}
 
 		const passwordValidation = await bcrypt.compare(
@@ -23,7 +23,7 @@ async function creatLogin(req, res) {
 		);
 
 		if (!passwordValidation) {
-			return res.status(404).json({ message: "Verifique os dados inseridos." });
+			return res.status(404).json({ message: "Verifique seus dados" });
 		}
 
 		const token = jwt.sign(
@@ -44,9 +44,7 @@ async function creatLogin(req, res) {
 			token: token,
 		});
 	} catch (error) {
-		res
-			.status(500)
-			.json({ message: "Não foi possível executar sua solicitação" });
+		res.status(500).json({ message: "Não foi possível realizar o login" });
 	}
 }
 

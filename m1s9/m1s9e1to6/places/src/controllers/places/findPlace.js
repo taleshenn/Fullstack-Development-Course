@@ -10,9 +10,7 @@ async function findPlace(req, res) {
 
 		res.json(showPlace);
 	} catch (error) {
-		res
-			.status(500)
-			.json({ message: "Não foi possível executar sua solicitação" });
+		res.status(500).json({ message: "Não foi possível encontrar o local" });
 	}
 }
 

@@ -14,7 +14,7 @@ async function place(req, res) {
 		if (!place.name || !place.description) {
 			return res
 				.status(400)
-				.json({ message: "Nome e descrição são obrigatórios." });
+				.json({ message: "Nome e descrição são obrigatários" });
 		}
 
 		const inDatabase = await Place.findOne({
@@ -22,14 +22,14 @@ async function place(req, res) {
 		});
 
 		if (inDatabase) {
-			return res.status(400).json({ message: "Nome já existente." });
+			return res.status(400).json({ message: "Nome já cadastrado" });
 		}
 
 		const newPlace = await Place.create(place);
 
 		res.status(201).json(newPlace);
 	} catch (error) {
-		res.status(500).json({ message: "Tabela não criada." });
+		res.status(500).json({ message: "Tente novamente mais tarde" });
 	}
 }
 
