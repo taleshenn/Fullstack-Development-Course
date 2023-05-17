@@ -1,0 +1,34 @@
+.mainContainer {
+    display: flexbox;
+    text-align: center;
+    width: 400px;
+}
+
+.imgContainer {
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+.imgContainer img:hover {
+    filter: hue-rotate(25deg);
+    filter: brightness(90%);
+}
+
+.headerTextContainer {
+    text-align: center;
+}
+
+.formContainer {
+    display: block;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+@media (max-width: 400px) {
+    .formContainer {
+        background: none;
+    }
+}
