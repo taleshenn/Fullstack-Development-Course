@@ -13,12 +13,14 @@
 
     <form id="loginForm">
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required aria-describedby="emailDescription"><br><br>
+        <span id="emailDescription">Insira seu endereço de e-mail.</span><br><br>
 
         <label for="senha">Senha:</label>
-        <input type="senha" id="senha" name="senha" required><br><br>
+        <input type="password" id="senha" name="senha" required aria-describedby="senhaDescription"><br><br>
+        <span id="senhaDescription">Insira sua senha.</span><br><br>
 
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar" aria-label="Enviar formulário de login">
     </form>
     <script src="assets/scripts/functions.js"></script>
 </body>
