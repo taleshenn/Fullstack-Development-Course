@@ -5,24 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/body.css">
+    <link rel="stylesheet" href="assets/styles/tema-claro.css">
+    <link rel="stylesheet" href="assets/styles/form.css">
+    <!--     <link rel="stylesheet" href="assets/styles/tema-escuro.css">
+ -->
+    <title>Form Login</title>
 </head>
 
-<body>
-    <h2>Formulário</h2>
-
-    <form id="loginForm">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required aria-describedby="emailDescription"><br><br>
-        <span id="emailDescription">Insira seu endereço de e-mail.</span><br><br>
-
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required aria-describedby="senhaDescription"><br><br>
-        <span id="senhaDescription">Insira sua senha.</span><br><br>
-
-        <input type="submit" value="Enviar" aria-label="Enviar formulário de login">
-    </form>
-    <script src="assets/scripts/functions.js"></script>
+<body class="tema-claro">
+    <div class="mainContainer">
+        <div class="formContainer">
+            <form class="signUpForm">
+                <fieldset>
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" class="inputField" placeholder="Informe seu e-mail"
+                        aria-label="Informe seu e-mail">
+                    <label for="senha"></label>
+                    <input type="password" name="senha" id="senha" class="inputField" placeholder="Informe sua senha"
+                        aria-label="Informe sua senha">
+                    <button class="btnPadrao" type="submit">Entrar</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

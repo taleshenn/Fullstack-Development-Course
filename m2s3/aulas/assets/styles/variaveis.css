@@ -1,0 +1,25 @@
+:root {
+    /* Tema claro */
+    --cor-fundo-claro: #f5f5f5;
+    --cor-texto-claro: #333;
+    --cor-input-fundo-claro: #fff;
+    --cor-input-texto-claro: #333;
+    --cor-botao-fundo-claro: #007bff;
+    --cor-botao-texto-claro: #fff;
+
+    /* Tema escuro */
+    --cor-fundo-escuro: #333;
+    --cor-texto-escuro: #fff;
+    --cor-input-fundo-escuro: #555;
+    --cor-input-texto-escuro: #fff;
+    --cor-botao-fundo-escuro: #007bff;
+    --cor-botao-texto-escuro: #fff;
+
+    /* Tema escuro */
+    --cor-fundo-marcador: yellow;
+
+}
+
+body {
+    margin: 0;
+}

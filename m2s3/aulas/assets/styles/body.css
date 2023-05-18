@@ -1,0 +1,5 @@
+@import url('variaveis.css');
+
+body {
+    background-color: var(--cor-fundo-marcador);
+}

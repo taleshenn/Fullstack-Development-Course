@@ -1,0 +1,34 @@
+@import url('variaveis.css');
+
+body:not(.tema-escuro) {
+    --cor-fundo: var(--cor-fundo-claro);
+    --cor-texto: var(--cor-texto-claro);
+    --cor-input-fundo: var(--cor-input-fundo-claro);
+    --cor-input-texto: var(--cor-input-texto-claro);
+    --cor-botao-fundo: var(--cor-botao-fundo-claro);
+    --cor-botao-texto: var(--cor-botao-texto-claro);
+}
+
+.mainContainer {
+    background-color: var(--cor-fundo-claro);
+    /* color: var(--cor-texto-claro); */
+}
+
+.formContainer {
+    background-color: var(--cor-formulario-fundo-claro);
+    /* color: var(--cor-formulario-texto-claro); */
+}
+
+.headerTextContainer h1 {
+    color: var(--cor-titulo-claro);
+}
+
+.inputField {
+    background-color: var(--cor-input-fundo-claro);
+    color: var(--cor-input-texto-claro);
+}
+
+.btnPadrao {
+    background-color: var(--cor-botao-fundo-claro);
+    color: var(--cor-botao-texto-claro);
+}

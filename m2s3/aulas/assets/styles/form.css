@@ -1,0 +1,12 @@
+.mainContainer {
+    margin: 150px 120px;
+}
+
+.formContainer {}
+
+.signUpForm {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+
+}
