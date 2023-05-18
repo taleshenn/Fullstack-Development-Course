@@ -1,0 +1,62 @@
+.container {
+    /* ... */
+}
+
+/* FORM */
+#formLogin {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    background-color: rgb(154, 154, 154);
+    padding: 20px;
+}
+
+fieldset {
+    /* border: none;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    background-color: rgb(243, 224, 182); */
+}
+
+fieldset label {
+    font-size: 14px;
+}
+
+fieldset input {
+}
+
+/* FOOTER */
+.footer {
+
+}
+
+/* * {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.text-danger {
+    color: rgb(242, 55, 55);
+}
+
+.text-success {
+    color: green;
+}
+
+.text-warning {
+    color: yellow;
+}
+
+#conteudoSucesso {
+    color: rgb(242, 55, 55);
+}
+
+span {
+    color: rgb(242, 55, 55);
+}
+
+input[type="radio"] {
+
+} */

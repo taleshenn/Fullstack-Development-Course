@@ -1,0 +1,28 @@
+* {
+    font-size: 30px;
+}
+#div1 {
+    height: 50px;
+    background-color: rgb(237, 176, 176);
+    max-width: 280px;
+    padding: 20px;
+}
+
+#div2 {
+    display: block;
+    height: 50px;
+    background-color: rgb(176, 237, 178);
+}
+
+input {
+    font-size: 24px;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;    
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}

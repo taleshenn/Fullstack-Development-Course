@@ -1,0 +1,12 @@
+:root {
+    --color-red: #601a1a;
+    --font-size-1: 25px;
+
+    --black-1: #0A0A0C;
+    --black-2: #2B2C33;
+    --black-4: #B4B6C1;
+    --black-5: #F2F3F7;
+
+    --text-success: rgb(40, 117, 40);
+    --link-active-color: #00a354;
+} 

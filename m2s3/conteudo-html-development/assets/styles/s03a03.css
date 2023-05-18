@@ -1,0 +1,26 @@
+@import 'variaveis.css';
+
+h4 {
+    color: var(--black-2);
+}
+
+.text-muted {
+    color: var(--black-4);
+}
+
+.text-success {
+    color: var(--p-text-success);
+}
+
+.link {
+    color: blue;
+}
+
+.link-active {
+    color: var(--link-active-color) !important;
+    text-decoration: none;
+}
+
+.cor2 {
+    color: red;
+}
