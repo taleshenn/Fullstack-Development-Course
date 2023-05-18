@@ -43,6 +43,5 @@ input:focus {
     .inputPares label,
     .inputPares input {
         width: 90%;
-        /* Sobrescreve apenas a largura */
     }
 }
