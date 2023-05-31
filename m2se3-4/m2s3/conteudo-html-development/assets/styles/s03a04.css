@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    background-color: #4c4c4c;
+    position: sticky;
+    top: 0;
+    z-index: 100;    
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 280px;
+    justify-content: space-between;
+}
+
+a {
+    color: white;
+}
+#content {
+    height: 1500px;
+}
+
+#s1 {
+    height: 100vh;
+    background-color: #cfcfcf;
+}
+
+#s2 {
+    height: 40vh;
+    background-color: #000;
+}
+
+.box {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 180px;
+}
+
+.div-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.div-flex input {
+    width: calc(180px * 0.5);
+}

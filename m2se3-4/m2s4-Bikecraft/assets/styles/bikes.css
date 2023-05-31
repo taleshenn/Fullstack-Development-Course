@@ -1,0 +1,9 @@
+.body2 {
+    display: flexbox;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: none;
+    padding: none;
+    /* background: linear-gradient(var(--cor-10) 600px, var(--cor-1) 0px); */
+    background-color: white;
+}

@@ -1,0 +1,157 @@
+:root {
+    --background-footer: #fb1;
+    --color-footer: #764701;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    top: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 50rem;    
+    height: 4rem;
+    padding: 0 1rem;    
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh + 10rem);
+}
+
+.content__login {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+img {
+    max-width: 50vw;
+}
+
+.forms {
+    margin-top: 20vh;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.title::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--background-footer);
+    bottom: 1px;
+    left: -5px;
+}
+
+.title::after {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--background-footer);
+    border-radius: 0.2rem;    
+    z-index: -1;
+    bottom: 5px;
+    left: -5px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    background-color: #eee;
+    border: 1.25px solid #eee;
+    transition: .2s;
+}
+
+input:focus, input:hover {
+    outline: none;
+    border-color: var(--background-footer);
+    background-color: white;
+}
+
+button, .btn_cadastro {
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: var(--background-footer);
+    color: var(--color-footer);
+    min-width: 8rem;
+    padding: 0.8rem 1.2rem;
+}
+
+.perdeu_senha {
+    display: inline-block;
+    color: #666;
+    padding: 0.5rem 0;
+}
+
+.cadastro {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.cadastro h2 {
+    font-size: 2rem;
+}
+
+.cadastro p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: var(--background-footer);
+    color: var(--color-footer);
+    text-align: center;
+    height: 10rem;
+    padding: 3rem 1rem; /* top | left/right | bottom*/
+}

@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.product {
+    max-width: 220px;
+    height: 320px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(0.95);
+}
+
+.image-product {
+    width: 220px;
+    height: 260px;
+    margin: 0 auto;
+    background-color: rgb(215, 214, 214);
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.title-product, .price-product {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.buy-button {
+    background-color: transparent;
+    outline: 0;
+    padding: 5px 8px;
+    border: 2px solid #fb1;
+    border-radius: 6px;
+}

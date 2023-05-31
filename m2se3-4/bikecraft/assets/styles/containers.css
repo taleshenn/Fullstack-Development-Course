@@ -1,0 +1,63 @@
+@import url(variaveis.css);
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--black-pure);
+    padding: 20px 60px;
+}
+
+.container {
+    background-color: var(--black-muted);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    top: 17px;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+}
+
+li {
+    list-style-type: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.col-6 {
+    max-width: 440px;
+}
+
+.p-t-120 {
+    padding-top: 120px;
+}
+
+.img-banner {
+    width: 440px;
+    z-index: 5;
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 6;
+}
